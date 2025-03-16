@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 30 - Autobus</title>
+    <script>
+        var autobus = {
+            ilu_pasazerow: "35",
+            kolor: "zielony",
+            długość: "12m",
+            autobus_wyswietl_Sławek: function() {
+                document.getElementById("wynik").innerHTML =
+                    "Obiekt: autobus<br>" +
+                    "Pola:<br>" +
+                    "- ilu_pasażerów: " + this.ilu_pasazerow + "<br>" +
+                    "- kolor: " + this.kolor + "<br>" +
+                    "- długość: " + this.długość + "<br>" +
+                    "Metoda: autobus_wyswietl_Sławek";
+            }
+        };
+    </script>
+</head>
+<body>
+    <h2>Zadanie 30 - Obiekt autobus</h2>
+    <button onclick="autobus.autobus_wyswietl_Sławek()">Pokaż dane obiektu</button>
+    <button onclick="document.getElementById('kod').style.display='block'">Pokaż kod</button>
+    <div id="wynik" style="margin-top: 20px; font-weight: bold;"></div>
+    <pre id="kod" style="display: none; background-color: #f4f4f4; padding: 10px; border: 1px solid #ccc;">
+        var autobus = {
+            ilu_pasazerow: "35",
+            kolor: "zielony",
+            długość: "12m",
+            autobus_wyswietl_Sławek: function() {
+                document.getElementById("wynik").innerHTML =
+                    "Obiekt: autobus<br>" +
+                    "Pola:<br>" +
+                    "- ilu_pasażerów: " + this.ilu_pasazerow + "<br>" +
+                    "- kolor: " + this.kolor + "<br>" +
+                    "- długość: " + this.długość + "<br>" +
+                    "Metoda: autobus_wyswietl_Sławek";
+            }
+        };
+    </pre>
+</body>
+</html>

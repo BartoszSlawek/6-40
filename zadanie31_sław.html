@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 31 - Autobus</title>
+    <script>
+        var Autobus = {
+            ilu_pasazerow: "35",
+            kolor: "zielony",
+            długość: "12m",
+            Autobus_wyswietl_Sławek: function() {
+                document.getElementById("wynik").innerHTML =
+                    "Obiekt: Autobus<br>" +
+                    "Pola:<br>" +
+                    "- ilu_pasażerów: " + this.ilu_pasazerow + "<br>" +
+                    "- kolor: " + this.kolor + "<br>" +
+                    "- długość: " + this.długość + "<br>" +
+                    "- wysokość: " + this.wysokość + "<br>" +
+                    "Metoda: Autobus_wyswietl_Sławek<br>" +
+                    "Nowa metoda: Autobus_pokaz_Sławek";
+            }
+        };
+        
+        // Dodanie nowej właściwości poza ciałem obiektu
+        Autobus.wysokość = "3m";
+        
+        // Dodanie nowej metody poza ciałem obiektu
+        Autobus.Autobus_pokaz_Sławek = function() {
+            alert("Nowa właściwość - wysokość: " + this.wysokość);
+        };
+    </script>
+</head>
+<body>
+    <h2>Zadanie 31 - Obiekt Autobus</h2>
+    <button onclick="Autobus.Autobus_wyswietl_Sławek()">Pokaż dane obiektu</button>
+    <button onclick="Autobus.Autobus_pokaz_Sławek()">Pokaż nową właściwość</button>
+    <button onclick="document.getElementById('kod').style.display='block'">Pokaż kod</button>
+    <div id="wynik" style="margin-top: 20px; font-weight: bold;"></div>
+    <pre id="kod" style="display: none; background-color: #f4f4f4; padding: 10px; border: 1px solid #ccc;">
+        var Autobus = {
+            ilu_pasazerow: "35",
+            kolor: "zielony",
+            długość: "12m",
+            Autobus_wyswietl_Sławek: function() {
+                document.getElementById("wynik").innerHTML =
+                    "Obiekt: Autobus<br>" +
+                    "Pola:<br>" +
+                    "- ilu_pasażerów: " + this.ilu_pasazerow + "<br>" +
+                    "- kolor: " + this.kolor + "<br>" +
+                    "- długość: " + this.długość + "<br>" +
+                    "- wysokość: " + this.wysokość + "<br>" +
+                    "Metoda: Autobus_wyswietl_Sławek<br>" +
+                    "Nowa metoda: Autobus_pokaz_Sławek";
+            }
+        };
+        
+        Autobus.wysokość = "3m";
+        
+        Autobus.Autobus_pokaz_Sławek = function() {
+            alert("Nowa właściwość - wysokość: " + this.wysokość);
+        };
+    </pre>
+</body>
+</html>

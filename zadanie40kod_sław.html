@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 40 - Kod źródłowy</title>
+    <style>
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Kod źródłowy Zadania 40</h1>
+    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pl&quot;&gt;
+&lt;head&gt;
+    &lt;title&gt;Zadanie JavaScript&lt;/title&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;style&gt;
+        h1 { text-transform: uppercase; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Bartosz Sławek - Klasa 3K&lt;/h1&gt;
+
+    &lt;label for=&quot;a&quot;&gt;Podaj pierwszą liczbę:&lt;/label&gt; 
+    &lt;input type=&quot;number&quot; id=&quot;a&quot;&gt;
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;label for=&quot;b&quot;&gt;Podaj drugą liczbę:&lt;/label&gt; 
+    &lt;input type=&quot;number&quot; id=&quot;b&quot;&gt;
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;input type=&quot;button&quot; value=&quot;DODAWANIE&quot; onclick=&quot;suma_sła()&quot;&gt;
+    &lt;input type=&quot;button&quot; value=&quot;ODEJMOWANIE&quot; onclick=&quot;roznica_sła()&quot;&gt;
+    &lt;input type=&quot;button&quot; value=&quot;MNOŻENIE&quot; onclick=&quot;iloczyn_sła()&quot;&gt;
+    &lt;input type=&quot;button&quot; value=&quot;DZIELENIE&quot; onclick=&quot;iloraz_sła()&quot;&gt;
+
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;div id=&quot;wynik&quot;&gt;&lt;/div&gt;
+
+    &lt;script&gt;
+        function suma_sła() {
+            var a = document.getElementById(&quot;a&quot;).value;
+            var b = document.getElementById(&quot;b&quot;).value;
+
+            if (a == &quot;&quot; || b == &quot;&quot;) {
+                document.getElementById(&quot;wynik&quot;).innerHTML = "Proszę uzupełnić obie liczby.";
+            } else {
+                a = parseFloat(a);
+                b = parseFloat(b);
+                var suma = a + b;
+                document.getElementById(&quot;wynik&quot;).innerHTML = "Wynik działania wynosi: " + suma.toFixed(2);
+            }
+        }
+
+        function roznica_sła() {
+            var a = document.getElementById(&quot;a&quot;).value;
+            var b = document.getElementById(&quot;b&quot;).value;
+
+            if (a == &quot;&quot; || b == &quot;&quot;) {
+                document.getElementById(&quot;wynik&quot;).innerHTML = "Proszę uzupełnić obie liczby.";
+            } else {
+                a = parseFloat(a);
+                b = parseFloat(b);
+                var roznica = a - b;
+                document.getElementById(&quot;wynik&quot;).innerHTML = "Wynik działania wynosi: " + roznica.toFixed(2);
+            }
+        }
+
+        function iloczyn_sła() {
+            var a = document.getElementById(&quot;a&quot;).value;
+            var b = document.getElementById(&quot;b&quot;).value;
+
+            if (a == &quot;&quot; || b == &quot;&quot;) {
+                document.getElementById(&quot;wynik&quot;).innerHTML = "Proszę uzupełnić obie liczby.";
+            } else {
+                a = parseFloat(a);
+                b = parseFloat(b);
+                var iloczyn = a * b;
+                document.getElementById(&quot;wynik&quot;).innerHTML = "Wynik działania wynosi: " + iloczyn.toFixed(2);
+            }
+        }
+
+        function iloraz_sła() {
+            var a = document.getElementById(&quot;a&quot;).value;
+            var b = document.getElementById(&quot;b&quot;).value;
+
+            if (a == &quot;&quot; || b == &quot;&quot;) {
+                document.getElementById(&quot;wynik&quot;).innerHTML = "Proszę uzupełnić obie liczby.";
+            } else if (b == 0) {
+                document.getElementById(&quot;wynik&quot;).innerHTML = "Nie wolno dzielić przez zero.";
+            } else {
+                a = parseFloat(a);
+                b = parseFloat(b);
+                var iloraz = a / b;
+                document.getElementById(&quot;wynik&quot;).innerHTML = "Wynik działania wynosi: " + iloraz.toFixed(2);
+            }
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+</body>
+</html>

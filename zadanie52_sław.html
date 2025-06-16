@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Bartosz Sławek - Zadanie 52</title>
+    <style>
+        pre { font-size: 18px; }
+    </style>
+</head>
+<body>
+    <pre>
+<script type="text/javascript">
+    // Dane osobowe
+    var nazwisko = "Slawek";  // 6 liter (bez polskich znaków)
+    var imie = "Bartosz";     // 7 liter
+
+    // Obliczanie wymiarów prostokąta
+    var a_sła = (nazwisko.length % 4) + 5; // a = 6 % 4 + 5 = 7
+    var b_sła = (imie.length % 6) + 20;    // b = 7 % 6 + 20 = 21
+
+    // Górna linia gwiazdek
+    for (var i = 0; i < b_sła; i++) {
+        document.write("*");
+    }
+    document.write("<br>");
+
+    // Środkowe linie (pionowe gwiazdki i spacje)
+    for (var w = 0; w < a_sła - 2; w++) {
+        document.write("*");
+        for (var j = 0; j < b_sła - 2; j++) {
+            document.write("&nbsp;");
+        }
+        document.write("*<br>");
+    }
+
+    // Dolna linia gwiazdek
+    for (var i = 0; i < b_sła; i++) {
+        document.write("*");
+    }
+
+    // Wyświetlenie wartości a i b
+    document.write("<br><br>");
+    document.write("a = " + a_sła + "<br>");
+    document.write("b = " + b_sła + "<br>");
+</script>
+    </pre>
+</body>
+</html>

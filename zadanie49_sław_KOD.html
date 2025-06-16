@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Kod źródłowy - Zadanie 49</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        pre { background: #f0f0f0; padding: 10px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Kod źródłowy zadania 49</h1>
+    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Bartosz Sławek - Zadanie 49&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;script type="text/javascript"&gt;
+        // Program do obliczania silni liczby podanej przez użytkownika
+        // Zmienna n_sła zawiera liczbę podaną przez użytkownika
+        let n_sła = parseInt(prompt("Podaj liczbę, dla której chcesz obliczyć silnię:"));
+
+        // Zmienna silnia_sła będzie przechowywać wynik końcowy
+        let silnia_sła;
+
+        // Jeżeli liczba to 0, to zgodnie z definicją 0! = 1
+        if (n_sła === 0) {
+            silnia_sła = 1;
+        } else {
+            // Inicjalizacja wyniku na 1
+            silnia_sła = 1;
+
+            // Pętla mnożąca kolejne liczby od 1 do n_sła
+            for (let i = 1; i &lt;= n_sła; i++) {
+                silnia_sła *= i; // Mnożenie dotychczasowego wyniku przez i
+            }
+        }
+
+        // Wyświetlenie wyniku na stronie
+        document.write(n_sła + "! = " + silnia_sła);
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+</body>
+</html>

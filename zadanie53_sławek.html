@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Bartosz Sławek - Zadanie 53</title>
+    <style>
+        pre { font-size: 17px; }
+    </style>
+</head>
+<body>
+    <pre>
+<script type="text/javascript">
+    // Pobieranie wymiarów od użytkownika
+    var a_sła = parseInt(prompt("Podaj wysokość prostokąta (a):"));
+    var b_sła = parseInt(prompt("Podaj szerokość prostokąta (b):"));
+
+    // 1. Górna linia gwiazdek
+    for (var i = 0; i < b_sła; i++) {
+        document.write("*");
+    }
+    document.write("<br>");
+
+    // 2. Przygotowanie środkowego wiersza
+    var wiersz_sła = "*";
+    for (var i = 1; i <= (b_sła - 2); i++) {
+        wiersz_sła = wiersz_sła + "&nbsp;&nbsp;";
+    }
+    wiersz_sła = wiersz_sła + "*";
+
+    // 3. Wyświetlenie środkowych wierszy (a - 2)
+    for (var i = 0; i < a_sła - 2; i++) {
+        document.write(wiersz_sła + "<br>");
+    }
+
+    // 4. Dolna linia gwiazdek
+    for (var i = 0; i < b_sła; i++) {
+        document.write("*");
+    }
+</script>
+    </pre>
+</body>
+</html>

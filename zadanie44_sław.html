@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Bartosz sławek - Zadanie 44</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // Obliczenia zgodnie z poleceniem
+        let liczba_liter_nazwiska = "sławek".length; // 6 liter
+        let ile_razy_wyswietlic = (liczba_liter_nazwiska % 4) + 10; // 6 % 4 = 2 -> 2 + 10 = 12
+        let wielkosc_liter = (liczba_liter_nazwiska % 3) + 40; // 6 % 3 = 0 -> 0 + 40 = 40
+
+        document.write("Ilość wykonania pętli = " + ile_razy_wyswietlic + "<br>");
+        document.write("Wielkość liter = " + wielkosc_liter + "px<br><br>");
+
+        for(let i_s = 1; i_s <= ile_razy_wyswietlic; i_s++) {
+            if(i_s % 2 === 1) {
+                document.write("<span style='font-size:" + wielkosc_liter + "px;'>sławek</span><br>");
+            } else {
+                document.write("<span style='font-size:" + wielkosc_liter + "px;'>Bartosz</span><br>");
+            }
+        }
+    </script>
+</body>
+</html>

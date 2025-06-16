@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Kod źródłowy - Zadanie 46</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        pre { background: #f0f0f0; padding: 10px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Kod źródłowy zadania 46</h1>
+    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Bartosz sławek - Zadanie 46&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div style="color:red;font-size:50px;"&gt;
+        &lt;script type="text/javascript"&gt;
+            var h_sła = 0;
+            do {
+                var h_sła = prompt("Podaj wysokość trójkąta (większą od zera):", "");
+                h_sła = parseFloat(h_sła);
+            } while (h_sła &lt;= 0);
+
+            var a_sła = 0;
+            do {
+                var a_sła = prompt("Podaj podstawę trójkąta (większą od zera):", "");
+                a_sła = parseFloat(a_sła);
+            } while (!(a_sła &gt; 0));
+
+            var Pole = (a_sła * h_sła) / 2;
+            document.write("Pole=" + Pole.toFixed(2) + " cm^2" + "&lt;br&gt;");
+        &lt;/script&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+</body>
+</html>

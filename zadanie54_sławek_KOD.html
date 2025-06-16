@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Kod źródłowy - Zadanie 54</title>
+    <style>pre { background: #f0f0f0; padding: 10px; border-radius: 5px; font-size: 15px; }</style>
+</head>
+<body>
+    <h1>Kod źródłowy zadania 54</h1>
+    <pre>
+&lt;script type="text/javascript"&gt;
+    var imie = prompt("Podaj imię:");
+    var nazwisko = prompt("Podaj nazwisko:");
+
+    var a_sła = (nazwisko.length % 4) + 5;
+    var b_sła = (imie.length % 6) + 20;
+
+    for (var i = 0; i &lt; b_sła; i++) {
+        document.write("*");
+    }
+    document.write("&lt;br&gt;");
+
+    for (var i = 0; i &lt; a_sła - 2; i++) {
+        document.write("*");
+        for (var j = 0; j &lt; b_sła - 2; j++) {
+            document.write("&nbsp;");
+        }
+        document.write("*&lt;br&gt;");
+    }
+
+    for (var i = 0; i &lt; b_sła; i++) {
+        document.write("*");
+    }
+&lt;/script&gt;
+    </pre>
+</body>
+</html>

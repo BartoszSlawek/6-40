@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Bartosz Sławek - Zadanie 54</title>
+    <style>pre { font-size: 17px; }</style>
+</head>
+<body>
+    <pre>
+<script type="text/javascript">
+    var imie = prompt("Podaj imię:");
+    var nazwisko = prompt("Podaj nazwisko:");
+
+    var a_sła = (nazwisko.length % 4) + 5;
+    var b_sła = (imie.length % 6) + 20;
+
+    for (var i = 0; i < b_sła; i++) {
+        document.write("*");
+    }
+    document.write("<br>");
+
+    for (var i = 0; i < a_sła - 2; i++) {
+        document.write("*");
+        for (var j = 0; j < b_sła - 2; j++) {
+            document.write("&nbsp;");
+        }
+        document.write("*<br>");
+    }
+
+    for (var i = 0; i < b_sła; i++) {
+        document.write("*");
+    }
+</script>
+    </pre>
+</body>
+</html>
